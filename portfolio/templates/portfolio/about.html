@@ -1,0 +1,16 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<section id="about-section" class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-5 heading-decorated" data-aos="fade-up">About Me</h2>
+        <div class="glass-card p-4 mx-auto mb-5" style="max-width: 600px;" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.5">
+            <img src="{{ profile.profile_image.url }}" class="rounded-circle mb-3 profile-img" width="150" height="150" alt="Profile Picture">
+            <h4 class="fw-bold">{{ profile.name }}</h4>
+            <p class="lead text-muted mb-3">{{ profile.bio }}</p>
+            <a href="{% url 'projects' %}" class="btn btn-primary mt-3">View My Work</a>
+        </div>
+        
+    </div>
+</section>
+{% endblock %}
